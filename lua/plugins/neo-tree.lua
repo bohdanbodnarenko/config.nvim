@@ -73,7 +73,7 @@ return {
           folder_empty = '󰜌',
           -- The next two settings are only a fallback, if you use nvim-web-devicons and configure default icons there
           -- then these will never be used.
-          -- default = '*',
+          default = '*',
           highlight = 'NeoTreeFileIcon',
         },
         modified = {
@@ -160,7 +160,7 @@ return {
             -- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
             -- some commands may take optional config options, see `:h neo-tree-mappings` for details
             config = {
-              show_path = 'none', -- "none", "relative", "absolute"
+              show_path = 'relative', -- "none", "relative", "absolute"
             },
           },
           ['A'] = 'add_directory', -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
@@ -208,6 +208,7 @@ return {
           },
           always_show = { -- remains visible even if other settings would normally hide it
             --".gitignored",
+            '.env',
           },
           never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
             --".DS_Store",
@@ -309,7 +310,7 @@ return {
     }
 
     vim.cmd [[nnoremap \ :Neotree reveal<cr>]]
-    vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', { noremap = true, silent = true }) -- focus file explorer
+    vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', { remap = true, desc = '[E]xplorer NeoTree', silent = true })
     -- TODO: change mapping here
     vim.keymap.set('n', '<leader>ngs', ':Neotree float git_status<CR>', { noremap = true, silent = true }) -- open git status window
   end,
