@@ -1,4 +1,5 @@
 require('lazy').setup({
+  'nvim-tree/nvim-web-devicons',
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   require 'plugins.gitsigns',
@@ -10,20 +11,15 @@ require('lazy').setup({
   require 'plugins.lspconfig',
   require 'plugins.autoformat',
   require 'plugins.autocompletion',
-
   require 'plugins.colorsheme',
-
   require 'plugins.todo-comments',
-
   require 'plugins.mini',
   require 'plugins.treesitter',
-
   require 'plugins.debug',
-  -- require 'plugins.indent_line',
-  -- require 'plugins.lint',
   require 'plugins.autopairs',
   require 'plugins.neo-tree',
   require 'plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'plugins.bufferline',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
