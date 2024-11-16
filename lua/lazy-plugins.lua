@@ -8,7 +8,7 @@ require('lazy').setup({
   require 'plugins.which-key',
   require 'plugins.lazydev',
   require 'plugins.luvit-meta',
-  require 'plugins.lspconfig',
+  require 'plugins.lsp',
   require 'plugins.autoformat',
   require 'plugins.autocompletion',
   require 'plugins.colorsheme',
