@@ -37,10 +37,10 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Buffers
--- vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = '[B]uffer: go to the next buffer' })
--- vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { desc = '[B]uffer: go to previous buffer' })
--- vim.keymap.set('n', '<leader>bx', ':bdelete!<CR>', { desc = '[B]uffer: close the buffer' }) -- close buffer
--- vim.keymap.set('n', '<leader>bb', '<cmd> enew <CR>', { desc = '[B]uffer: create new buffer' }) -- new buffer
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { desc = '[B]uffer: go to the next buffer' })
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { desc = '[B]uffer: go to previous buffer' })
+vim.keymap.set('n', '<leader>bx', ':bdelete!<CR>', { desc = '[B]uffer: close the buffer' }) -- close buffer
+vim.keymap.set('n', '<leader>bb', '<cmd> enew <CR>', { desc = '[B]uffer: create new buffer' }) -- new buffer
 
 -- TODO: fix search with split keybinds overlap
 -- Window management
