@@ -61,3 +61,7 @@ vim.keymap.set('v', '>', '>gv')
 
 -- Keep last yanked when pasting
 vim.keymap.set('v', 'p', '"_dP')
+
+-- Quick list iteration
+vim.keymap.set('n', '<C-n>', '<cmd>cnext<CR>zz', { desc = 'Jump to the next [Q]uick fix in the list' })
+vim.keymap.set('n', '<C-p>', '<cmd>cprev<CR>zz', { desc = 'Jump to the previous [Q]ick fix in the list' })
