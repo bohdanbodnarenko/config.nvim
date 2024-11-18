@@ -40,6 +40,34 @@ return { -- Autocompletion
     local luasnip = require 'luasnip'
     luasnip.config.setup {}
 
+    local kind_icons = {
+      Text = '󰉿',
+      Method = 'm',
+      Function = '󰊕',
+      Constructor = '',
+      Field = '',
+      Variable = '󰆧',
+      Class = '󰌗',
+      Interface = '',
+      Module = '',
+      Property = '',
+      Unit = '',
+      Value = '󰎠',
+      Enum = '',
+      Keyword = '󰌋',
+      Snippet = '',
+      Color = '󰏘',
+      File = '󰈙',
+      Reference = '',
+      Folder = '󰉋',
+      EnumMember = '',
+      Constant = '󰇽',
+      Struct = '',
+      Event = '',
+      Operator = '󰆕',
+      TypeParameter = '󰊄',
+    }
+
     cmp.setup {
       snippet = {
         expand = function(args)
@@ -97,6 +125,20 @@ return { -- Autocompletion
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
+      },
+      formatting = {
+        expandable_indicator = true,
+        fields = { 'kind', 'abbr', 'menu' },
+        format = function(entry, vim_item)
+          vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
+          vim_item.menu = ({
+            nvim_lsp = '[LSP]',
+            luasnip = '[Snippet]',
+            buffer = '[Buffer]',
+            path = '[Path]',
+          })[entry.source.name]
+          return vim_item
+        end,
       },
     }
   end,
