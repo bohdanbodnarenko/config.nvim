@@ -65,3 +65,7 @@ vim.keymap.set('v', 'p', '"_dP')
 -- Quick list iteration
 vim.keymap.set('n', '<C-n>', '<cmd>cnext<CR>zz', { desc = 'Jump to the next [Q]uick fix in the list' })
 vim.keymap.set('n', '<C-p>', '<cmd>cprev<CR>zz', { desc = 'Jump to the previous [Q]ick fix in the list' })
+
+-- Visual selection moves
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move visual selection down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move visual selection up' })
