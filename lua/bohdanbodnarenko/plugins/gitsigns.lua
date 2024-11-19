@@ -35,6 +35,7 @@ return {
         -- Actions
         -- visual mode
         map('v', '<leader>hs', function()
+          qasd
           gitsigns.stage_hunk { vim.fn.line '.', vim.fn.line 'v' }
         end, { desc = 'stage git hunk' })
         map('v', '<leader>hr', function()
