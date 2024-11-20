@@ -23,7 +23,7 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- quit all
-vim.keymap.set('n', '<leader>qq', '<cmd> qa <CR>', { desc = 'Exit neovim and save everything', silent = true })
+-- vim.keymap.set('n', '<leader>qq', '<cmd> qa <CR>', { desc = 'Exit neovim and save everything', silent = true })
 
 -- delete single character without copying it to register
 -- vim.keymap.set('n', 'x', '"_x')
@@ -69,3 +69,7 @@ vim.keymap.set('n', '<C-p>', '<cmd>cprev<CR>zz', { desc = 'Jump to the previous 
 -- Visual selection moves
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move visual selection down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move visual selection up' })
+
+vim.keymap.set('n', '<leader>o', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Select all [O]ccurances of the current word' })
+
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
