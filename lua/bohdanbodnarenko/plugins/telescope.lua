@@ -69,6 +69,7 @@ return {
         end,
       },
       extensions = {
+        fzf = {},
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
         },
