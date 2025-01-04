@@ -44,10 +44,10 @@ vim.keymap.set('n', '<leader>bb', '<cmd> enew <CR>', { desc = '[B]uffer: create 
 
 -- TODO: fix search with split keybinds overlap
 -- Window management
-vim.keymap.set('n', '<leader>v', '<C-w>v', { desc = '[S]plit: split window vertically' })
--- vim.keymap.set('n', '<leader>sh', '<C-w>s', { desc = '[S]plit: split window horizontally' })
--- vim.keymap.set('n', '<leader>se', '<C-w>=', { desc = '[S]plit: make split equal width & height' })
--- vim.keymap.set('n', '<leader>sx', ':close<CR>', { desc = '[S]plit: close current split window' })
+vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = '[S]plit: split window vertically' })
+vim.keymap.set('n', '<leader>sh', '<C-w>s', { desc = '[S]plit: split window horizontally' })
+vim.keymap.set('n', '<leader>se', '<C-w>=', { desc = '[S]plit: make split equal width & height' })
+vim.keymap.set('n', '<leader>sx', ':close<CR>', { desc = '[S]plit: close current split window' })
 
 -- Tabs
 vim.keymap.set('n', '<leader>to', ':tabnew<CR>', { desc = '[T]ab: open new tab' })
