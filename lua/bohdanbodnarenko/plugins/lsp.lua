@@ -169,7 +169,20 @@ return {
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
       -- clangd = {},
-      gopls = {},
+      gopls = {
+        cmd = { 'gopls' },
+        filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+        settings = {
+          gopls = {
+            completeUnimported = true,
+            -- add placeholder to all autocompleted functions
+            usePlaceholders = true,
+            analyses = {
+              unusedparam = true,
+            },
+          },
+        },
+      },
       pyright = {},
       cssls = {},
       tailwindcss = {},
